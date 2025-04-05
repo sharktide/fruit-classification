@@ -1,0 +1,8 @@
+fastapi
+tensorflow==2.18.0
+numpy
+pillow
+uvicorn
+opencv-python-headless
+tensorflowtools
+python-multipart
