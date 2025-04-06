@@ -33,8 +33,36 @@
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Fruit Classification with Fruits 360</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/fruit-classification">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/sharktide/fruit-classification">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://huggingface.co/collections/sharktide/fruit-classification-67f1c9fcec600c92da639145">HuggingFace Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://huggingface.co/spaces/sharktide/tf_misc_model_server/tree/main">API</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <div class="container">
         <h1 class="text-center mb-4">Fruit Classification</h1>
+        <h5 class="text-center mb-4">by 🦈 sharktide 🦈</h1>
         <form id="uploadForm">
             <div class="mb-3">
                 <label for="modelSelect" class="form-label">Select Model:</label>
@@ -67,7 +95,7 @@
             </div>
             <p>Predicting...</p>
         </div>
-        <div class="result mt-4 text-center">
+        <div id="result" class="result mt-4 text-center">
             <h3>Prediction Result:</h3>
             <p id="resultText" class="fw-bold"></p>
         </div>
