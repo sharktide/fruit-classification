@@ -26,6 +26,7 @@ switchToFile.addEventListener('click', () => {
 switchToWebcam.addEventListener('click', () => {
     fileInputContainer.style.display = 'none';
     webcamContainer.style.display = 'block';
+    selectedFile = null; // Reset selection
     startWebcam();
 });
 
@@ -66,10 +67,10 @@ predictButton.addEventListener('click', async () => {
     const model = modelSelect.value;
     const formData = new FormData();
 
-    if (fileInput.files.length > 0) {
-        formData.append('file', fileInput.files[0]);
-    } else if (selectedFile) {
+    if (selectedFile) {
         formData.append('file', selectedFile);
+    } else if (fileInput.files.length > 0) {
+        formData.append('file', fileInput.files[0]);
     } else {
         alert('Please select an image or capture one using the webcam!');
         return;
